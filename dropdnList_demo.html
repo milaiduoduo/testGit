@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/dropdn.css">
+</head>
+<body>
+    <div class="form_group">
+        <lable><span class="warning">*</span>专  业：</lable>
+        <div class="right_Panel">
+        <div class="drpdownlist dropdn c_nationType clear" id="major"></div>
+    </div>
+</div>
+</body>
+<script src="js/jquery_1.11.3.min.js"></script>
+<script src="js/dropdnList_single.js"></script>
+<script>
+    $(function(){
+        /*init dropDownList*/
+        (function(){
+            /*major*/
+            var majorOption = {
+                "defaultLable":"请选择",
+                "multiple":"false",
+                "li_a_Data":[{"key":"外语","value":"0"},{"key":"文学","value":"1"},{"key":"艺术","value":"2"},{"key":"计算机","value":"3"}],
+                "li_a_callback":function ($li_obj) {
+
+                }
+            };
+            $('#major').dropdnInitWithOpt(majorOption);
+
+        })();
+    })
+</script>
+</html>
